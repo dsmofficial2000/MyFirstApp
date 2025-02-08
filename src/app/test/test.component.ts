@@ -10,8 +10,8 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './test.component.css'
 })
 export class TestComponent {
-  keyPress() {
-    console.log('Keypress event is triggered.');
+  keyPress(e:any) {
+    console.log(e.target.value);
   }
   // name : string = "";
   // title = 'Durgesh';
