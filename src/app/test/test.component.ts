@@ -10,10 +10,9 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './test.component.css'
 })
 export class TestComponent {
-  inputData: string = '';
-  dynamicTest : string = '';  
+  count = 0;
 
-  show() {
-    this.dynamicTest = this.inputData;
+  counter(type:string) {
+    type==='incr'? this.count++ : this.count--;
   }
 }
