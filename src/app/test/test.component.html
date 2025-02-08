@@ -1,1 +1,18 @@
-<p>test works!</p>
+<title>Hello</title>
+<input type="text" [(ngModel)]="name" placeholder="Enter Text Her ...">
+<hr>
+<h1>Hello {{name}} </h1>
+<br>
+<h1>{{msg}}</h1>
+<h1>{{title}}</h1>
+<h1>------------------------------</h1>
+<p> The Value of a is {{a}}</p>
+<p> The Value of a is {{b}}</p>
+<p> The Answer of a & b is {{ans}}</p>
+<h1>------------------------------</h1>
+
+<input type="text" value="{{inputVal}}" disabled="isDisabled"/>
+<br>
+<br>
+<!-- The property binding is a good approach  -->
+<input type="text" [value]="inputVal" [disabled]="isDisabled"/>
