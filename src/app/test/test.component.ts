@@ -11,7 +11,13 @@ import { FormsModule } from '@angular/forms';
 })
 export class TestComponent {
   keyPress(e:any) {
-    console.log(e.target.value);
+    console.log(e.target.value,'Shift + D is pressed');
+  }
+
+  keyPress2(event:any) {
+    if(event.shifKey && event.key === 'Y') {
+      console.log(event.value,'Shift + Y is pressed');
+    }
   }
   // name : string = "";
   // title = 'Durgesh';

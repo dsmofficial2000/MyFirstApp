@@ -1,4 +1,8 @@
-<input type="text" placeholder="key up evenet" (keyup)="keyPress($event)">
+<input type="text" placeholder="key up evenet" (keydown.shift.D)="keyPress($event)">
+
+<!-- 2nd Way to bind key event -->
+<input type="text" placeholder="key up evenet 2" (keydown)="keyPress2($event)">
+
 <!-- <input type="text" placeholder="key press evenet" (keypress)="keyPress()">
 <br>
 <input type="text" placeholder="key press evenet" (keydown)="keyPress()">
