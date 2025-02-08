@@ -20,4 +20,14 @@ export class TestComponent {
   a = 10;
   b = 20;
   ans = this.a + this.b;
+
+  display(msg:string){
+    alert(msg);
+  }
+
+  //Define one variable
+  counter = 0;
+  Increment() {
+    this.counter++;
+  }
 }

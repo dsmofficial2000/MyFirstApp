@@ -19,3 +19,16 @@
 <br>
 <br>
 <img [src]="imgSrc" alt="">
+<br>
+<br>
+<button type="submit" (click)="display('hello durgesh')" >Click</button>
+
+<h1 (click)="Increment()">Single Click- Increment {{counter}}</h1>
+<h1 (dblclick)="Increment()">Double Click Increment {{counter}}</h1>
+<h1 (mouseover)="Increment()">MoserOver Increment {{counter}}</h1>
+
+<h1 (mouseleave)="Increment()">mouseleave Increment {{counter}}</h1>
+<h1 (mousedown)="Increment()">mousedown Increment {{counter}}</h1>
+<h1 (mouseup)="Increment()">MoserOver Increment {{counter}}</h1>
+<h1 (drag)="Increment()">mouseup Increment {{counter}}</h1>
+<h1 (dragover)="Increment()">dragover Increment {{counter}}</h1>
