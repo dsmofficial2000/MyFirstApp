@@ -10,6 +10,10 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './test.component.css'
 })
 export class TestComponent {
-  staticData: string = 'Hell welcome';
+  inputData: string = '';
   dynamicTest : string = '';  
+
+  show() {
+    this.dynamicTest = this.inputData;
+  }
 }
