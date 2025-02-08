@@ -1,4 +1,9 @@
-<title>Hello</title>
+<input type="text" placeholder="key press evenet" (keypress)="keyPress()">
+<br>
+<input type="text" placeholder="key press evenet" (keydown)="keyPress()">
+<br>
+<input type="text" placeholder="key press evenet" (keyup)="keyPress()">
+<!-- <title>Hello</title>
 <input type="text" [(ngModel)]="name" placeholder="Enter Text Her ...">
 <hr>
 <h1>Hello {{name}} </h1>
@@ -13,9 +18,9 @@
 
 <input type="text" value="{{inputVal}}" disabled="isDisabled"/>
 <br>
-<br>
+<br> -->
 <!-- The property binding is a good approach  -->
-<input type="text" [value]="inputVal" [disabled]="isDisabled"/>
+<!-- <input type="text" [value]="inputVal" [disabled]="isDisabled"/>
 <br>
 <br>
 <img [src]="imgSrc" alt="">
@@ -32,3 +37,4 @@
 <h1 (mouseup)="Increment()">MoserOver Increment {{counter}}</h1>
 <h1 (drag)="Increment()">mouseup Increment {{counter}}</h1>
 <h1 (dragover)="Increment()">dragover Increment {{counter}}</h1>
+ -->
