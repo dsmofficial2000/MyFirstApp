@@ -10,33 +10,6 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './test.component.css'
 })
 export class TestComponent {
-  keyPress(e:any) {
-    console.log(e.target.value,'Shift + D is pressed');
-  }
-
-  keyPress2(event:any) {
-    if(event.shifKey && event.key === 'Y') {
-      console.log(event.value,'Shift + Y is pressed');
-    }
-  }
-  // name : string = "";
-  // title = 'Durgesh';
-  // msg = 'Hello , Welcome to app component `page';
-  // inputVal = 'ABC Test';
-  // isDisabled = true;
-  // imgSrc = 'assets/images.png';
-
-  // a = 10;
-  // b = 20;
-  // ans = this.a + this.b;
-
-  // display(msg:string){
-  //   alert(msg);
-  // }
-
-  // //Define one variable
-  // counter = 0;
-  // Increment() {
-  //   this.counter++;
-  // }
+  staticData: string = 'Hell welcome';
+  dynamicTest : string = '';  
 }
