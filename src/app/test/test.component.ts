@@ -15,6 +15,7 @@ export class TestComponent {
   msg = 'Hello , Welcome to app component `page';
   inputVal = 'ABC Test';
   isDisabled = true;
+  imgSrc = 'assets/images.png';
 
   a = 10;
   b = 20;
