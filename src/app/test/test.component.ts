@@ -17,18 +17,12 @@ interface emplist{
   styleUrl: './test.component.css'
 })
 export class TestComponent {
-  display: boolean = false;
+  
+  displayElement: boolean = false;
 
-  displayelement: boolean = false;
-
-  num: number = -20;
-
-  show() {
-    this.display = !this.display;
+  togglelist() {
+    this.displayElement = !this.displayElement;
   }
-
-  // Angular 17
-  showEmpList : boolean = false;
   employees = <emplist[]>([
     { id: 1, name: 'EmployeeA', role: 'Admin' },
     { id: 2, name: 'EmployeeB', role: 'HR' },
@@ -36,9 +30,5 @@ export class TestComponent {
     { id: 4, name: 'EmployeeD', role: 'Developer' },
     { id: 5, name: 'EmployeeE', role: 'Marketing' },
   ]);
-
-  ToggleEmployee() {
-    this.showEmpList = !this.showEmpList;
-  }
   
 }
