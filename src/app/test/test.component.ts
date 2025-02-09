@@ -18,11 +18,6 @@ interface emplist{
 })
 export class TestComponent {
 
-  age :number = 0;
-  isEligible : boolean = false;
-  
-  checkAgeEligibility() {
-    this.isEligible = this.age >= 18;
-  }
+  updateStyles = 'updateStyles';
   
 }

@@ -1,0 +1,18 @@
+.updateStyles {
+    text-align: center;
+    background-color: black;
+    color: orange;
+    font: 21px;
+    padding: 10px 20px;
+    margin: 0 auto;
+    border-radius: 5px;
+    width: 700px;
+}
+
+.italicText {
+    font-style: italic;
+}
+
+.letterFormat {
+    text-transform: uppercase;
+}
