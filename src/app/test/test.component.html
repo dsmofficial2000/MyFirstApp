@@ -1,64 +1,21 @@
-<div>
-    <h2>Role Select</h2>
-    <select [(ngModel)]="employeeRole">
-        <option value="">Select Role</option>
-        <option value="Admin">Admin</option>
-        <option value="HR">HR</option>
-        <option value="Marketing">Marketing</option>
-        <option value="Developer">Developer</option>
-        <option value="Analyst">Analyst</option>
-    </select>
+<button (click)="toggleMode()">
+    {{ colorMode === 'lightMode' ? 'Switch to Dark mode' : 'Switch to Light mode' }}
+  </button>
 
-    @switch (employeeRole) {
-        @case ('Admin') {
-            <h1>List Of Employees</h1>
-            <h3>Selected role is Admin</h3>
-            
-            <table>
-                <thead>
-                    <tr>
-                        <th>Id</th>
-                        <th>Name</th>
-                        <th>Role</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @for (emp of employees; track emp.id) {
-                        @if (emp.role === 'Admin') {
-                            <tr>
-                                <td>{{ emp.id }}</td>
-                                <td>{{ emp.name }}</td>
-                                <td>{{ emp.role }}</td>
-                            </tr>
-                        }
-                    }
-                </tbody>
-            </table>
-        }
-        @case ('HR') {
-            <h1>List Of Employees</h1>
-            <h3>Selected role is HR</h3>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Id</th>
-                        <th>Name</th>
-                        <th>Role</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @for (item of employees; track $index) {
-                        @if (item.role === "HR") {
+<div class="box" [ngClass]="colorMode">
+    <h1>Light Mode</h1>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+        Dolorem corrupti deleniti necessitatibus sapiente maxime placeat, 
+        voluptatem ullam ea, excepturi adipisci, 
+        perspiciatis ducimus incidunt deserunt aut neque culpa natus! Temporibus, nobis.
+    </p>
+</div>
 
-                            <tr>
-                                <th>{{item.id}}</th>
-                                <th>{{item.name}}</th>
-                                <th>{{item.role}}</th>
-                            </tr>
-                        }
-                    }
-                </tbody>
-            </table>
-        }
-    }
+<div class="box" [ngClass]="colorMode">
+    <h1>Dark Mode</h1>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+        Dolorem corrupti deleniti necessitatibus sapiente maxime placeat, 
+        voluptatem ullam ea, excepturi adipisci, 
+        perspiciatis ducimus incidunt deserunt aut neque culpa natus! Temporibus, nobis.
+    </p>
 </div>
