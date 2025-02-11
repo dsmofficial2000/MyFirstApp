@@ -10,5 +10,5 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './test.component.css'
 })
 export class TestComponent {
-  isAuthorized : boolean = false;
+  user: string = '';
 }

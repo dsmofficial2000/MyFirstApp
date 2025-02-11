@@ -1,12 +1,11 @@
-<!-- Grouping element with ng-container and ng-template  -->
-<ng-container *ngIf="isAuthorized; else unathorized">
-    <h1>
-        Authorized Access
-    </h1>
-</ng-container>
-
-<ng-template #unathorized>
-    <h1>
-        UnAuthorized Access
-    </h1>
-</ng-template>
+<div class="box">
+    <div class="input-container">
+        <input type="text" [(ngModel)]="user">
+        <label for="">Full Name</label>
+    </div>
+    <ng-container *ngIf="user !== '' else notValid"></ng-container>
+    
+    <ng-template #notValid>    
+        <h3>Please Enter your name</h3>        
+    </ng-template>    
+</div>
