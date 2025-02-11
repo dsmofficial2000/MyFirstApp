@@ -1,9 +1,12 @@
-<p [ngStyle]="{'color': 'maroon', 'font-size': '25px'}">
-    Example of [ngStyle] directive
-</p>
+<!-- Grouping element with ng-container and ng-template  -->
+<ng-container *ngIf="isAuthorized; else unathorized">
+    <h1>
+        Authorized Access
+    </h1>
+</ng-container>
 
-<br><br>
-<p [ngStyle]="{'color': colorval, 'font-size': fontSize, 'font-style': isItalic}">
-    Example of [ngStyle] directive
-</p>
-  
+<ng-template #unathorized>
+    <h1>
+        UnAuthorized Access
+    </h1>
+</ng-template>
