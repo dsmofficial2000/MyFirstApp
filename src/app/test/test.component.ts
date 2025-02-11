@@ -17,11 +17,7 @@ interface Employee{
   styleUrl: './test.component.css'
 })
 export class TestComponent {
-  
-  colorMode = 'lightMode';
-  
-  toggleMode() {
-    this.colorMode = this.colorMode === 'lightMode' ? 'darkMode' : 'lightMode';
-  }
-  
+  colorval = 'navy';
+  fontSize = '30px';
+  isItalic = 'italic';
 }
