@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
+import { Component, DoCheck, Input, SimpleChanges } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
@@ -9,10 +9,14 @@ import { FormsModule } from '@angular/forms';
   templateUrl: './test.component.html',
   styleUrl: './test.component.css'
 })
-export class TestComponent implements OnChanges{
+export class TestComponent implements DoCheck{
   @Input() user: any;
 
-  ngOnChanges(changes: SimpleChanges): void {
-    console.log('ngOnChanges Called: ', changes);
+  private Previoususername: string = '';
+  ngDoCheck(): void {
+    if(this.user.name != this.Previoususername) {
+      this.Previoususername = this.user.name;
+      console.log('ngDoCheck is called and user name is changed', this.user.name);
+    }
   }
 }
