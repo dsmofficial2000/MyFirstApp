@@ -1,3 +1,9 @@
 <h1>Component Creation Hook</h1>
-<app-test [user]="user"></app-test>
-<button (click)="ChangeUserName()">Change User Name</button>
+<div>
+    <h2>Parent Component</h2>
+    <button (click)="sendDataToChild()">Generate Number</button>
+
+    <app-test>
+        <h3>{{displayfromParent}}</h3>
+    </app-test>
+</div>

@@ -10,13 +10,8 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './test.component.css'
 })
 export class TestComponent implements DoCheck{
-  @Input() user: any;
 
-  private Previoususername: string = '';
   ngDoCheck(): void {
-    if(this.user.name != this.Previoususername) {
-      this.Previoususername = this.user.name;
-      console.log('ngDoCheck is called and user name is changed', this.user.name);
-    }
+    console.log('ngDoCheck is invoked...');
   }
 }

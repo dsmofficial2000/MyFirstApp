@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { AfterContentInit, Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { TestComponent } from './test/test.component';
 
@@ -9,12 +9,15 @@ import { TestComponent } from './test/test.component';
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-export class AppComponent{
-  user = {
-    name: 'ABC'
-  };
+export class AppComponent implements AfterContentInit{
+  displayfromParent = '';
 
-  ChangeUserName() {
-    this.user.name = 'XYZ';
+  ngAfterContentInit(): void {
+    console.log('ngAfterContentInit is invoked...');
+  }
+
+  sendDataToChild(): void {
+    let random = Math.floor(Math.random() *10);
+    this.displayfromParent = 'Random Number: ' + random;  
   }
 }
