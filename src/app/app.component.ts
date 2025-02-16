@@ -1,4 +1,4 @@
-import { AfterContentInit, Component } from '@angular/core';
+import { Component, DoCheck } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { TestComponent } from './test/test.component';
 
@@ -9,12 +9,13 @@ import { TestComponent } from './test/test.component';
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-export class AppComponent implements AfterContentInit{
+export class AppComponent implements DoCheck{
   displayfromParent = '';
 
-  ngAfterContentInit(): void {
-    console.log('ngAfterContentInit is invoked...');
+  ngDoCheck(): void {
+    console.log('ngDoCheck is invoked...');
   }
+  
 
   sendDataToChild(): void {
     let random = Math.floor(Math.random() *10);
