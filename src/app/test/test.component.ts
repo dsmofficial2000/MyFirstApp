@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input, input, OnChanges, SimpleChanges } from '@angular/core';
+import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
@@ -10,15 +10,9 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './test.component.css'
 })
 export class TestComponent implements OnChanges{
-  @Input() inputValue: string = '';
-  previousVal: string | undefined;
-  currentVal: string | undefined;
+  @Input() user: any;
 
   ngOnChanges(changes: SimpleChanges): void {
-    if(changes['inputValue']){
-      this.previousVal = changes['inputValue'].previousValue;
-      this.currentVal = changes['inputValue'].currentValue;
-      console.log(changes);
-    }
+    console.log('ngOnChanges Called: ', changes);
   }
 }

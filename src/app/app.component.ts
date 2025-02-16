@@ -10,9 +10,11 @@ import { TestComponent } from './test/test.component';
   styleUrl: './app.component.css'
 })
 export class AppComponent{
-  inputValue: string = 'New Value';
+  user = {
+    name: 'ABC'
+  };
 
-  updateValue(){
-    this.inputValue = "AppComponent";
+  ChangeUserName() {
+    this.user.name = 'XYZ';
   }
 }
