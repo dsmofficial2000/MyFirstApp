@@ -1,4 +1,4 @@
-import { Component, DoCheck } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { TestComponent } from './test/test.component';
 
@@ -9,16 +9,17 @@ import { TestComponent } from './test/test.component';
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-export class AppComponent implements DoCheck{
-  displayfromParent = '';
+export class AppComponent implements OnInit, OnDestroy{
+  displayTestComponent : boolean = true;
 
-  ngDoCheck(): void {
-    console.log('ngDoCheck is invoked...');
+  toggle(){
+    this.displayTestComponent = !this.displayTestComponent;
   }
   
-
-  sendDataToChild(): void {
-    let random = Math.floor(Math.random() *10);
-    this.displayfromParent = 'Random Number: ' + random;  
+  ngOnInit(): void {
+    console.log('app Component ngOnInit Hit');
+  }
+  ngOnDestroy(): void {
+    console.log('app Component ngOnDestroy Hit');
   }
 }
