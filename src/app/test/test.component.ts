@@ -10,9 +10,15 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './test.component.css'
 })
 export class TestComponent implements OnChanges{
-  @Input() inputValue : string = '';
+  @Input() inputValue: string = '';
+  previousVal: string | undefined;
+  currentVal: string | undefined;
+
   ngOnChanges(changes: SimpleChanges): void {
-    console.log('Calling from ngOnChange Test Component');
-    console.log('changes: ', changes);
+    if(changes['inputValue']){
+      this.previousVal = changes['inputValue'].previousValue;
+      this.currentVal = changes['inputValue'].currentValue;
+      console.log(changes);
+    }
   }
 }

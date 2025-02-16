@@ -9,6 +9,10 @@ import { TestComponent } from './test/test.component';
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-export class AppComponent {
-  inpurValue : string = 'Initial Value';
+export class AppComponent{
+  inputValue: string = 'New Value';
+
+  updateValue(){
+    this.inputValue = "AppComponent";
+  }
 }
