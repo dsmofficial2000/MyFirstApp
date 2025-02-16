@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { AfterContentChecked, AfterContentInit, AfterViewInit, Component, ContentChild, ElementRef, ViewChild } from '@angular/core';
+import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit, Component, ContentChild, ElementRef, ViewChild } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
@@ -9,7 +9,7 @@ import { FormsModule } from '@angular/forms';
   templateUrl: './test.component.html',
   styleUrl: './test.component.css'
 })
-export class TestComponent implements AfterViewInit, AfterContentInit , AfterContentChecked{
+export class TestComponent implements AfterViewInit, AfterContentInit , AfterContentChecked, AfterViewChecked{
   @ViewChild('wrapper') wrapper!: ElementRef;
   @ContentChild('contentWrapper') content!: ElementRef;
 
@@ -29,5 +29,10 @@ export class TestComponent implements AfterViewInit, AfterContentInit , AfterCon
     divElement.style.fontSize = '15px';
     divElement.style.fontWeight = '300';
     console.log("ngAfterViewInit() was invoked...>>");
+  }
+
+  ngAfterViewChecked(): void {
+    console.log("ngAfterViewChecked() was invoked...>>>");
+    
   }
 }
