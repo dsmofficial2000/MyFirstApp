@@ -10,5 +10,5 @@ import { TestComponent } from './test/test.component';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  
+  inpurValue : string = 'Initial Value';
 }
