@@ -1,7 +1,14 @@
-<div>
-    <h2>Test Component </h2>
-        <div>
-            <p style="color: red; font-weight: 500;">
-                {{ReceiveMessage}}</p>
-        </div>
-</div>
+<table border="i">
+    <thead>
+        <th>Id</th>
+        <th>Name</th>
+    </thead>
+    <tbody>
+        @for (course of ShowData; track course.id) {
+            <tr>
+                <td>{{course.id}}</td>
+                <td>{{course.name}}</td>
+            </tr>
+            }
+    </tbody>
+</table>

@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
@@ -9,6 +9,11 @@ import { FormsModule } from '@angular/forms';
   templateUrl: './test.component.html',
   styleUrl: './test.component.css'
 })
-export class TestComponent{
- @Input() ReceiveMessage: string = '';
+export class TestComponent implements OnInit{
+  @Input() ShowData: {id: number; name: string}[] = [];
+ 
+ 
+  ngOnInit(): void {
+    console.log('course: ', this.ShowData);
+  }
 }

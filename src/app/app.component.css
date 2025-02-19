@@ -1,16 +1,27 @@
-h1{
+h2{
     text-align: center;
-    font-size: 55px;
-    font-weight: 400;
+    font-weight: 360;
+    color: goldenrod;
+    font-size: 45px;
 }
-button{
+pre{
+    font-size: 15px;
     display: block;
-    padding: 8px 16px;
-    margin-left: 23px;
-    font-size: 20px;
-    border: 0;
+    background-color: #5d5c5c;
+    width: 400px;
+    margin: 0 auto;
+    padding: 5px;
     border-radius: 5px;
-    outline: 0;
-    background-color: dodgerblue;
-    margin-bottom: 12px;
+    text-wrap: wrap;
+}
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.parent,
+.child {
+    border: 1px solid #ccc;
+    padding: 10px;
 }
