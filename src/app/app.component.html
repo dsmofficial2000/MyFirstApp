@@ -1,10 +1,5 @@
-<div class="container">
-    <div class="Parent">
-        <h2>Parent Component</h2>
-        <pre>{{courses | json}}</pre>
-    </div>
-    <div class="child">
-        <h2>Child Component</h2>
-        <app-test [ShowData]="courses"></app-test>
-    </div>
+<app-test (myEvent)="receiveChildEvent($event)"></app-test>
+<div>
+    <h2>Parent Component</h2>
+    <p>{{message}}</p>
 </div>

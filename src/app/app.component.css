@@ -3,25 +3,15 @@ h2{
     font-weight: 360;
     color: goldenrod;
     font-size: 45px;
+    margin-top: 3px;
 }
-pre{
-    font-size: 15px;
-    display: block;
-    background-color: #5d5c5c;
-    width: 400px;
+div{
     margin: 0 auto;
-    padding: 5px;
-    border-radius: 5px;
-    text-wrap: wrap;
+    border: 1px solid;
+    width: 600px;
+    height: 200px;
 }
-.container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-}
-
-.parent,
-.child {
-    border: 1px solid #ccc;
-    padding: 10px;
+p{
+    font-size: 30px;
+    text-align: center;
 }

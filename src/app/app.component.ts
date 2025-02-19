@@ -11,11 +11,9 @@ import { CommonModule } from '@angular/common';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  courses: {id: number; name: string}[] = [
-    {id: 1, name: 'JavaScript - Marathon Interview Questions Series'},
-    {id: 2, name: 'Mastering React With Interview Questions, eStore Project'},
-    {id: 3, name: 'Mastering TypeScript With Marathon Interview Questions'},
-    {id: 4, name: 'Mastering HTML,CSS,Sass,Bootstrap + Interview Questions'}
-  ];
+  message: string = '';
 
+  receiveChildEvent(eventData: string){
+    this.message = eventData;
+  }
 }

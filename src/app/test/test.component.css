@@ -1,31 +1,11 @@
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 20px;
-  }
-  
-  thead {
-    background-color: #5d5c5c;
-    font-weight: bold;
-  }
-  
-  th {
-    padding: 10px;
-    text-align: center;
-    border-bottom: 1px solid #ccc;
-  }
-  
-  tbody {
-    background-color: #5d5c5c;
-  }
-  
-  tr:nth-child(even) {
-    background-color: #5d5c5c;
-  }
-  
-  td {
-    padding: 10px;
-    border-bottom: 1px solid #ccc;
-    text-align: center;
-  }
-  
+button{
+  display: block;
+  margin: 50px auto;
+  padding: 8px 16px;
+  width: 200px;
+  border: 0;
+  outline: 0;
+  background-color: aquamarine;
+  font-size: 20px;
+  border-radius: 5px;
+}
