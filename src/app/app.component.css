@@ -1,17 +1,20 @@
-h2{
+h2 {
     text-align: center;
     font-weight: 360;
-    color: goldenrod;
+    color: dodgerblue;
     font-size: 45px;
     margin-top: 3px;
-}
-div{
+  }
+  button {
+    display: block;
     margin: 0 auto;
-    border: 1px solid;
-    width: 600px;
-    height: 200px;
-}
-p{
-    font-size: 30px;
-    text-align: center;
-}
+    margin-bottom: 15px;
+    width: 110px;
+    border: 0;
+    padding: 4px;
+    outline: 0;
+    background-color: orangered;
+    font-size: 17px;
+    border-radius: 5px;
+  }
+  

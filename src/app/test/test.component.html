@@ -1,1 +1,9 @@
-<button (click)="emitEvent()">Click Me</button>
+<div>
+    <h3>Child Component</h3>
+    <ul>
+        <li *ngFor="let items of item; let i = index">
+            {{items}}
+            <button (click)="deleteItem(i)">deleteItem</button>
+        </li>
+    </ul>
+</div>

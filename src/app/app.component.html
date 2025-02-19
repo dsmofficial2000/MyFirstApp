@@ -1,5 +1,3 @@
-<app-test (myEvent)="receiveChildEvent($event)"></app-test>
-<div>
-    <h2>Parent Component</h2>
-    <p>{{message}}</p>
-</div>
+<h2>Parent Component</h2>
+<button (click)="addItem()">Add Item</button>
+<app-test *ngIf="itemArr.length > 0" [item]="itemArr" (itemDelete)="deleteItem($event)"></app-test>
