@@ -1,9 +1,6 @@
 <h1>Component Updation Hooks</h1>
 <div>
     <h2>Parent Component</h2>
-    <button (click)="toggle()">Hide and Show</button>
-
-    @if (displayTestComponent) {
-        <app-test></app-test>
-    }
+    <button (click)="showMsg()">Update</button>
+    <app-test [ReceiveMessage]="displayMessage"></app-test>
 </div>

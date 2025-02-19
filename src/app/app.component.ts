@@ -9,17 +9,10 @@ import { TestComponent } from './test/test.component';
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-export class AppComponent implements OnInit, OnDestroy{
-  displayTestComponent : boolean = true;
+export class AppComponent {
+  displayMessage: string = 'Message from parent Component';
 
-  toggle(){
-    this.displayTestComponent = !this.displayTestComponent;
-  }
-  
-  ngOnInit(): void {
-    console.log('app Component ngOnInit Hit');
-  }
-  ngOnDestroy(): void {
-    console.log('app Component ngOnDestroy Hit');
+  showMsg(): void {
+    this.displayMessage = 'Child Componenet Message: Updated ';
   }
 }
