@@ -1,27 +1,27 @@
-<h1 style="text-align: center;">{{title | uppercase}}</h1>
-<h1 style="text-align: center;">{{title | lowercase}}</h1>
-<h1 style="text-align: center;">{{Showdate}}</h1>
-<h1 style="text-align: center;">{{Showdate | date:'dd-MM-yyyy'}}</h1>
-<h1 style="text-align: center;">{{Showdate | date:'dd-MMM-yyyy'}}</h1>
-<h1 style="text-align: center;">{{Showdate | date:'dd MMM yyyy'}}</h1>
-<h1 style="text-align: center;">{{title | slice:0:7}}</h1>
-<h1 style="text-align: center;">{{items | slice:0:2}}</h1>
-<h1 style="text-align: center;">{{items | slice:-2}}</h1>
-
-<!-- Build in pipes -->
- <div class="table-container">
-    <table>
-        <tr>
-            <th>Name</th>
-            <th>State</th>
-            <th>Salary</th>
-        </tr>
-        @for(emp of employees1; track emp.name){
-            <tr>
-                <td>{{emp.name | titlecase}}</td>
-                <td>{{emp.state | slice:0:3}}</td>
-                <td>{{emp.salary | currency:'USD'}}</td>
-            </tr>
-            }
-    </table>
- </div>
+<!-- <div>
+    @for(prod of products; track prod.name | slice:pageStartIndex : endIndex){
+        <div>
+            <h2>{{prod.name}}</h2>
+            <img src="prod.imageUrl" alt="Course Image"/>
+        </div>
+    }
+    <div>
+        <button type="button" (click)="previousPage()">Previous</button>
+        <button type="button" (click)="nextPage()">Next</button>
+    </div>
+</div> -->
+<!-- in above solution With Pipe getting an error in angular 17 for Pagination {{Angular compilation emit failed.}} -->
+ <!-- So that's why i have implement below solution  -->
+<!-- This is also possible without Pipe -->
+<div>
+    @for(prod of slicedProducts; track prod.name) {
+      <div>
+        <h2>{{prod.name}}</h2>
+        <img src="{{prod.imageUrl}}" alt="Course Image" />
+      </div>
+    }
+    <div>
+      <button type="button" (click)="previousPage1()">Previous</button>
+      <button type="button" (click)="nextPage1()">Next</button>
+    </div>
+  </div>
