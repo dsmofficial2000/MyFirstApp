@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, EventEmitter, Input, OnDestroy, OnInit, Output } from '@angular/core';
+import { AfterContentInit, Component, ContentChild, ElementRef, EventEmitter, Input, OnDestroy, OnInit, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
@@ -9,10 +9,15 @@ import { FormsModule } from '@angular/forms';
   templateUrl: './test.component.html',
   styleUrl: './test.component.css'
 })
-export class TestComponent {
-  count: number = 0;
+export class TestComponent implements AfterContentInit{
+    
+  @ContentChild('showPara') paraRef?: ElementRef;
 
-  increment() : void {
-    this.count++;
+  ngAfterContentInit(): void {
+    const content = this.paraRef?.nativeElement;
+    content.style.fontStyle = 'italic';
+    content.style.fontWeight = '350';
+    content.style.font = 'italic';
+    console.log('this.paraRef: ', this.paraRef);
   }
 }

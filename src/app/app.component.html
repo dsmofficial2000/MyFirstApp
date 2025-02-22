@@ -1,5 +1,15 @@
 <div class="container">
     <h2>Parent Component</h2>
-    <button #btnRef (click)="incrementFromChildComponent()">Increment Counter</button>
-    <app-test></app-test>
+    <app-test>
+        <section>
+            <h2>Heading</h2>
+            <p #showPara>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Accusantium iste cumque enim voluptates doloribus 
+                exercitationem aut, consequuntur in, pariatur, qui quas 
+                id error aperiam laboriosam vero facere deleniti rerum 
+                animi.
+            </p>
+        </section>
+    </app-test>
 </div>
