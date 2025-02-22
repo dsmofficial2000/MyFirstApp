@@ -9,15 +9,6 @@ import { FormsModule } from '@angular/forms';
   templateUrl: './test.component.html',
   styleUrl: './test.component.css'
 })
-export class TestComponent implements AfterContentInit{
+export class TestComponent {
     
-  @ContentChild('showPara') paraRef?: ElementRef;
-
-  ngAfterContentInit(): void {
-    const content = this.paraRef?.nativeElement;
-    content.style.fontStyle = 'italic';
-    content.style.fontWeight = '350';
-    content.style.font = 'italic';
-    console.log('this.paraRef: ', this.paraRef);
-  }
 }

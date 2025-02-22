@@ -1,11 +1,10 @@
-import { AfterContentInit, AfterViewInit, Component, ContentChild, ElementRef, viewChild, ViewChild } from '@angular/core';
-import { TestComponent } from './test/test.component';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [TestComponent, CommonModule],
+  imports: [CommonModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
