@@ -10,21 +10,6 @@ import { CommonModule } from '@angular/common';
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-export class AppComponent implements OnInit{
-  itemArr: string[] = ['Item 1','Item 2','Item 3'];
+export class AppComponent {
   
-  ngOnInit(): void {
-    console.log('Parent Component initialized');
-  }
-
-  addItem() {
-    const newItem = `Item ${this.itemArr.length + 1}`
-    this.itemArr.push(newItem)
-  }
-
-  deleteItem(index: number) {
-    if(index >= 0 && this.itemArr.length){
-      this.itemArr.splice(index, 1);
-    }
-  }
 }

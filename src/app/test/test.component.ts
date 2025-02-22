@@ -9,19 +9,6 @@ import { FormsModule } from '@angular/forms';
   templateUrl: './test.component.html',
   styleUrl: './test.component.css'
 })
-export class TestComponent implements OnInit, OnDestroy{
-  @Input() item: string[] = [];
-  @Output() itemDelete = new EventEmitter<number>();
+export class TestComponent {
   
-  deleteItem(index: number) {
-    this.itemDelete.emit(index);
-  }
-
-  ngOnInit(): void {
-    console.log('Child Component is Initialized');
-  }
-
-  ngOnDestroy(): void {
-    console.log('Component is destroy');
-  }
 }
