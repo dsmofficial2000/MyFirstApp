@@ -1,17 +1,17 @@
 h2 {
-    text-align: center;
-    font-weight: 360;
-    font-size: 45px;
-    margin-top: 3px;
-  }
-  div{
-    border-radius: 15px;
-    padding: 10px;
-    width: 500px;
-    margin: 40px auto;
-  }
-  p{
-    padding: 5px;
-    text-align: left;
-  }
-  
+  text-align: center;
+  font-weight: 360;
+  font-size: 45px;
+  margin-top: 3px;
+}
+div{
+  border-radius: 15px;
+  padding: 10px;
+  width: 500px;
+  margin: 40px auto;
+  user-select: none;
+}
+p{
+  padding: 5px;
+  text-align: left;
+}
