@@ -1,4 +1,4 @@
-h2 {
+h1 {
   text-align: center;
   font-weight: 360;
   font-size: 45px;
@@ -6,12 +6,18 @@ h2 {
 }
 div{
   border-radius: 15px;
-  padding: 10px;
+  margin: 0px auto;
+  border: none;
+}
+.color-box {
   width: 500px;
-  margin: 40px auto;
-  user-select: none;
+  height: 250px;
+  margin-top: 20px;
+}
+#colorPicker{
+  background-color: #fff !important;
 }
 p{
-  padding: 5px;
-  text-align: left;
+  margin: auto 16px;
+  margin-top: 50px;
 }
