@@ -8,16 +8,6 @@ import { CommonModule } from '@angular/common';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
-export class AppComponent implements AfterViewInit{
-  @ViewChild('colorInput') colorInput!: ElementRef;
-
-  @HostBinding('style.backgroundColor') selectedColor!: string;
-
-  @HostListener('input', ['$event.target.value']) onColorChange(color: string){
-    this.selectedColor = color;
-  }
-
-  ngAfterViewInit(): void {
-    this.selectedColor = this.colorInput.nativeElement.value;
-  }
+export class AppComponent {
+  
 }
