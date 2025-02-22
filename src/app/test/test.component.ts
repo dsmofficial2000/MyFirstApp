@@ -10,5 +10,9 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './test.component.css'
 })
 export class TestComponent {
-  
+  count: number = 0;
+
+  increment() : void {
+    this.count++;
+  }
 }
