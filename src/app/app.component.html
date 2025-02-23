@@ -1,27 +1,2 @@
-<!-- <div>
-    @for(prod of products; track prod.name | slice:pageStartIndex : endIndex){
-        <div>
-            <h2>{{prod.name}}</h2>
-            <img src="prod.imageUrl" alt="Course Image"/>
-        </div>
-    }
-    <div>
-        <button type="button" (click)="previousPage()">Previous</button>
-        <button type="button" (click)="nextPage()">Next</button>
-    </div>
-</div> -->
-<!-- in above solution With Pipe getting an error in angular 17 for Pagination {{Angular compilation emit failed.}} -->
- <!-- So that's why i have implement below solution  -->
-<!-- This is also possible without Pipe -->
-<div>
-    @for(prod of slicedProducts; track prod.name) {
-      <div>
-        <h2>{{prod.name}}</h2>
-        <img src="{{prod.imageUrl}}" alt="Course Image" />
-      </div>
-    }
-    <div>
-      <button type="button" (click)="previousPage1()">Previous</button>
-      <button type="button" (click)="nextPage1()">Next</button>
-    </div>
-  </div>
+<p>{{pi | number: '2:2,3'}}</p>
+<p>Test</p>
